@@ -1,0 +1,210 @@
+<!-- <!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>柔らかい見出し見本</title>
+  <style>
+
+    h2 {
+  position: relative;
+  text-align: center;
+  font-size: 1.6rem;
+  color: #1f2937;
+}
+
+h2::before,
+h2::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 30%;
+  height: 1px;
+  background-color: #d1d5db;
+}
+
+h2::before {
+  left: 0;
+}
+h2::after {
+  right: 0;
+}
+
+
+body {
+  background-image: url("https://example.com/your-pattern.png");
+  background-repeat: repeat;         /* タイル状に繰り返す */
+  background-size: 100px 100px;      /* 模様のサイズ調整（任意） */
+  background-position: top left;
+  background-color: #f9fafb;         /* 画像が透けている場合の背景色 */
+}
+
+    p {
+      line-height: 1.8;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>この記事について</h2>
+  <p>
+    これは柔らかい印象を与える見出しのデザイン見本です。淡い色合いと角の丸み、やさしいフォントで構成されています。
+  </p>
+
+  <h2>よくある質問</h2>
+  <p>
+    見出しを使って読みやすく、安心感のある構成にすることで、ユーザー体験が向上します。
+  </p>
+
+  
+
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>背景にランダム画像</title>
+  <style>
+.sidebar {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9fafb;
+  border-radius: 12px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  padding: 15px 20px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #374151;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.card ul li a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.card ul li a:hover {
+  text-decoration: underline;
+}
+
+.avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 10px 0;
+}
+
+.search-box {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+.social-links a {
+  color: #1e40af;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.social-links a:hover {
+  text-decoration: underline;
+}
+
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #fdfdfd;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .bg-icon {
+      position: absolute;
+      transform: rotate(-15deg);
+      width: 20%;
+      height: 20%;
+      opacity: 0.2;
+    }
+
+    .bg1 { top: 10%; left: 20%; }
+    .bg2 { top: 40%; left: 60%; }
+    .bg3 { top: 70%; left: 10%; }
+    .bg4 { top: 30%; left: 80%; }
+  </style>
+</head>
+<body>
+
+  <!-- 背景アイコン -->
+  <img src="./image/cool_vert.JPG" class="bg-icon bg1" />
+  <img src="./image/cool_vert.JPG" class="bg-icon bg2" />
+  <img src="./image/cool_vert.JPG" class="bg-icon bg3" />
+  <img src="./image/cool_vert.JPG" class="bg-icon bg4" />
+
+  <h1 style="position: relative; z-index: 1; text-align: center; padding-top: 100px;">
+    背景に画像がちらほら
+  </h1>
+
+  <aside class="sidebar">
+    <div class="card">
+      <h3>プロフィール</h3>
+      <img src="https://i.imgur.com/0y0y0y0.png" alt="プロフィール画像" class="avatar">
+      <p>こんにちは！Webと語学が好きな開発者です。</p>
+    </div>
+  
+    <div class="card">
+      <h3>検索</h3>
+      <input type="text" placeholder="キーワード検索" class="search-box">
+    </div>
+  
+    <div class="card">
+      <h3>人気記事</h3>
+      <ul>
+        <li><a href="#">英単語の覚え方ベスト5</a></li>
+        <li><a href="#">VSCodeの神設定まとめ</a></li>
+      </ul>
+    </div>
+  
+    <div class="card">
+      <h3>カテゴリ</h3>
+      <ul>
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">英語学習</a></li>
+      </ul>
+    </div>
+  
+    <div class="card">
+      <h3>フォローする</h3>
+      <div class="social-links">
+        <a href="#">🐦 Twitter</a><br>
+        <a href="#">📘 Facebook</a>
+      </div>
+    </div>
+  </aside>
+
+</body>
+</html>

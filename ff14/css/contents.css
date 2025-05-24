@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color:#f2f7f7;;
+    color: #222;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 800px;
+    margin: 10px auto 40px;
+    padding: 0 20px;
+}
+
+/* ヘッダーの処理 */
+header {
+    color: white;
+    font-size: small;
+    padding: 15px 20px 0px;
+    text-align: left;
+    margin-top: 60px; /* 固定ナビの高さ分 */
+}
+header h1 {
+    position: absolute;
+    padding-top: 15%;
+    padding-left: 5%;
+}
+/* 画像にグラデーション */
+.gradation {
+    background-image: url("../image/smile_hor.JPG");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    position: relative;
+    margin: 0px 24%;
+}
+.gradation::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(90deg, #545353, transparent);
+}
+
+.main {
+    background-color: white;
+    padding: 5px 30px;
+    margin-bottom: 15px;
+}
+/* 記事に画像を差し込む */
+.maintxt {
+    background-image: url("../image/food.png");
+    background-size: 20%;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+h2 {
+    background-color: #f0f9ff;
+    border-left: 6px solid #38bdf8;
+    padding: 10px 15px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    color: #0369a1;
+}
+
+/* マウスオーバーで下線を引く、オシャです */
+h3 {
+    display: inline-block;  /* 絶対位置の基準 */
+    position: relative;  /* サイズ合わせのため */
+    margin-top: 40px;
+    color: #111;
+
+    font-size: 1.5rem;
+    border-left: 5px solid #10b981; 
+    padding-left: 12px;
+}
+h3::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 4px;
+    background-color: #60a5fa;
+    transform: scaleX(0);   /* 横幅を縮小 */
+    transform-origin: left; /* アニメーションの開始地点 */
+    transition: transform 0.3s ease;    /* 変化時間 */
+}
+h3:hover::after {
+    transform: scaleX(1);   /* ホバーで横幅が100％に */
+} 
+
+/* その他のタグ装飾 */
+p{
+    margin:0 0 0.5em; /*上 左右 下*/
+}
+
+a {
+    color: #0366d6;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+/* マーカーや下線などの装飾 */
+.highlight {
+    background-color: #fff59d; 
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.underline{
+    text-decoration: underline;
+    text-decoration-color: red;
+    text-decoration-style: wavy; 
+}

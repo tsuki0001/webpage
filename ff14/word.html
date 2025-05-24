@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>用語一覧</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f8fafc;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #1e293b;
+      margin-bottom: 30px;
+    }
+
+    .word-list {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      overflow-x: auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    th {
+      background-color: #f1f5f9;
+      color: #475569;
+    }
+
+    tr:hover {
+      background-color: #f9fafb;
+    }
+
+    @media screen and (max-width: 600px) {
+      th, td {
+        padding: 10px;
+        font-size: 14px;
+      }
+    }
+
+    .search-box {
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+    #searchInput {
+        padding: 10px;
+        width: 300px;
+        font-size: 1rem;
+        border: 1px solid #cbd5e1;
+        border-radius: 5px;
+    }
+
+  </style>
+  <script>
+    function filterTable() {
+      const input = document.getElementById("searchInput").value.toLowerCase();
+      const rows = document.querySelectorAll("tbody tr");
+    
+      rows.forEach(row => {
+        const word = row.cells[0].textContent.toLowerCase();
+        const meaning = row.cells[1].textContent.toLowerCase();
+        const match = word.includes(input) || meaning.includes(input);
+        row.style.display = match ? "" : "none";
+      });
+    }
+  </script>
+</head>
+<body>
+
+    <h1>単語一覧 ※間違ってたらごめんw</h1>
+
+    <div class="search-box">
+    <input type="text" id="searchInput" placeholder="単語で検索..." onkeyup="filterTable()" />
+    </div>
+
+    <div class="word-list">
+    <table>
+        <thead>
+            <tr>
+                <th>用語</th>
+                <th>意味</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>AA</td><td>オートアタックのこと、敵味方どちらも行う<br>詳しくは<a href="https://game8.jp/ff14/292717">こちら</a>を参考に。</td></tr>
+            <tr><td>AOE</td><td>敵からの攻撃予兆、なんか地面とか自分にオレンジのやつ出るでしょ！それです！</td></tr>
+            <tr><td>GCD</td><td>アクション使用時のクールダウンのこと、技使うとなんかくるくるするよね！それです！<br>基本は2.5秒<br>詳しくは<a href="https://game8.jp/ff14/290817">こちら</a>を参考に。</td></tr>
+            <tr><td>シナジー</td><td>味方のダメージをあげる系のスキル（桃園結義、ディビネーションなど）<br>基本120秒に一回使えて20秒継続する※例外あり<br>味方と合わせて使うと効果大！でも基本使えるようになったらすぐ打とうね！</td></tr>
+            <tr><td>禁断</td><td>マテリアを上限を超えてつけること<br>基本マテリアは装備に開いてある穴の数しか付けれないが一部それを無視して５つまでつけることが可能。ただし成功確率はとても低い！最後は3％だよ...怖...<br>禁断可能かどうかの見分け方は装備の背景が青色の場合は不可。緑色でHQのマークが付いてると禁断可能だと覚えておけば大丈夫。<br>正確には微妙に違うんだけど詳しく知りたければ検索してみて〜</td></tr>
+            <tr><td>飯</td><td>FF14内のご飯のことですね！食べたらちょっと強くなるよ！経験値も増えるしね！<br>戦闘用だけじゃなくクラフターやギャザラーのまで幅広くある！</td></tr>
+            <tr><td>薬</td><td>主に高難易度で使用される一部のステータスを底上げしてくれるアイテム。まぁわかりやすく言うとドーピングですなw<br>効果時間は30秒。一度使うと4分30秒使えない。再使用まで長すぎ...。<br>ジョブによって適切な薬があるので詳しく知りたければ<a href="https://game8.jp/ff14/283059">こちら</a>を参考に。</td></tr>
+            <tr><td>IL</td><td>アイテムレベルのこと。簡単に言うと装備の強さ！もちろん高ければ高いほど強い！</td></tr>
+            <tr><td>平均IL</td><td>キャラクターが装備している全装備の平均値です。FF内のコンテンツの参加条件になることが多く、平均ILが低いと参加できるコンテンツが少なくなる。<br>ちなみに結構大事な数値で10上がるだけで結構変わります...。10ってね？そんな変わらなそうなのにね？</td></tr>
+            <tr><td>スイッチ</td><td>MTとSTが入れ替わること。高難易度でタンクが使うことになるテクニック。普通のダンジョンとかでは使わん！絶対！<br>詳しくは<a href="https://game8.jp/ff14/292365">こちら</a>を参考に。</td></tr>
+            <tr><td>MT</td><td>メインタンク。タンクが二人いるようなコンテンツでボスや雑魚のヘイトを取ったりボスを誘導したりする役。</td></tr>
+            <tr><td>ST</td><td>サブタンク。タンクが二人いるコンテンツでメインタンクに軽減を投げたり、メインタンクが苦しい状況で一時的にボスからのヘイトを受け持ったりする役。</td></tr>
+            <tr><td>PH</td><td>ピュアヒーラー。減ったHPを戻すことに特化したヒーラー。<br>7.0現在は白魔道士、占星術師の２ジョブがある。<br>ただちょっと占星が強すぎるかな...笑</td></tr>
+            <tr><td>BH</td><td>バリアヒーラー。ピュアとは違いバリアを事前に張りそもそもHPを減らさないようにすることに特化したヒーラー。<br>7.0現在は賢者、学者の２ジョブがある。</td></tr>
+            <tr><td>メレー</td><td>近接DPS。敵に近づいて近接武器で攻撃するDPS。侍、竜騎士、モンクなど。<br>敵に近づく分攻撃を喰らいやすいが火力も他DPSと比べて高い傾向にある。</td></tr>
+            <tr><td>レンジ</td><td>遠隔の物理DPS。遠距離から投擲武器などで攻撃するDPS。踊り子、詩人など。<br>敵から離れて安全に攻撃できるが火力は低い。<br>ただその分サポート能力が高いジョブが多い傾向にある。</td></tr>
+            <tr><td>キャス</td><td>遠隔の魔法DPS。遠距離から魔法を使用し攻撃するDPS。黒魔道士、召喚士など。<br>敵から離れて攻撃できるが攻撃をするのに詠唱が必要なためその場を動けなくなる時間が存在する。慣れるまでは難しい。</td></tr>
+            <tr><td>コンテンツ</td><td>FF14はこれ！　IDという4人で行くダンジョンから、8人で行く討滅戦、24人で行くアライアンスダンジョンなど様々なものがある。</td></tr>
+            <tr><td>dot</td><td>継続ダメージのこと。3秒ごとに一回発動し敵にダメージを与える。<br>継続ダメージは技によって威力も変わる。</td></tr>
+            <tr><td>hot</td><td>継続回復のこと。基本ヒーラーが使う回復スキルでhotをつけた味方が3秒に一回回復する。</td></tr>
+            <tr><td>CF</td><td>コンテンツファインダーの略。コンテンツファインダーを使うと、一緒に冒険してくれる仲間を勝手に見つけてパーティーを組んでくれる。シャキーン！ってね！</td></tr>
+            <tr><td>レストエリア</td><td>都市内およびエーテライトなどが「レストエリア」となっており、レストボーナス蓄積される。(ログアウト中も蓄積される)<br>レストボーナスは全クラス・ジョブ共通で蓄積され、全てのジョブで経験値を取得した際にボーナスが加算（消費）される。</td></tr>
+            <tr><td>HQ</td><td>ハイクオリティのことで、アイテムや武器防具の性能が少し上がった状態。<br>HQのアイテムは左上がキラキラしており、アイテム名の最後に独特のマークがついてる。</td></tr>
+            <tr><td>頭割り</td><td>敵からの攻撃をPTメンバーと一緒に受けてダメージを分散させる攻撃。<br>一人で受けると即死してしまうダメージもみんなで分ければ痛くない！ってね！</td></tr>
+            <tr><td>LB</td><td>リミットブレイクのこと。まぁ要は必殺技っす！<br>ただロールによって効果が違い、タンクが打つとダメージ超軽減、ヒーラーが打つと蘇生＆超回復、近接DPSは単体超ダメージなどなど。<br>詳しくは<a href="https://game8.jp/ff14/291315">こちら</a>を参考に。</td></tr>
+            <tr><td>ロール</td><td>FF14内で実装されている職業のことで、戦闘職のタンク、ヒーラー、DPSと非戦闘職のギャザラーとクラフターがある。</td></tr>
+            <tr><td>こえちか</td><td>超える力のこと。一部の高難易度にて実装されている負けるたびにステータスが爆発的に上昇していく救済措置。<br>絶と呼ばれるコンテンツと最新の高難易度コンテンツ以外では基本発動する。</td></tr>
+            <tr><td>極</td><td>極〇〇討滅戦のこと。ストーリーで戦う討滅戦とは一味違いDPSチェックや決まった位置への移動もあり敵によってはかなり難しいのもある。<br>マクロと呼ばれる呪文(笑)を用いて戦う。</td></tr>
+            <tr><td>絶</td><td>絶コンテンツと呼ばれるFF14の中で一番難しいコンテンツ。本当にえげつない！！</td></tr>
+            <tr><td>敵視</td><td>ヘイトともいう。挑発や攻撃、回復といった敵の嫌がる行動をとると上昇する。<br>PTリストの名前に敵視の順番が表示されていて、Aとついてる人が一番ヘイトが高く敵からのAAを受けてる状態を表す。次いで1→2→となる。</td></tr>
+            <tr><td>DPSチェック</td><td>高難易度コンテンツなどで一定時間以内にオブジェクトや敵を破壊しないと負けになるギミック。<br>また、制限時間内にボスを討伐するのに必要な総ダメージ量もDPSチェックと呼ばれる。</td></tr>
+            <tr><td>バースト</td><td>瞬間的に大ダメージを与えること。またその時間。<br>シナジー(味方への/からの火力支援)を伴う大きなバーストが120周期で発生する。PTでこの瞬間を合わせて大ダメージを狙うのがシナジー合わせと言われる。</td></tr>
+            <tr><td>方向指定</td><td>近接DPSの技に指定された方向から攻撃するとダメージが上がる技がある。それの方向。<br>近接DPSのロールアクションのトゥルーノースという技を使えばどこから攻撃しても方向指定が成功したことになる。</td></tr>
+            <tr><td>制限解除</td><td>CFの左上の歯車から設定できる。<br>本来IDや討滅戦は指定されたレベルと人数でいくものだが制限解除することにより一人で,しかも今のジョブのレベルで行くことが可能になる。<br>ただし経験値は入らない。そんな甘い世界ではないのだよ！ハハハッ！</td></tr>
+            <tr><td>シャキ待ち</td><td>コンテンツへの申請を待ってる状態。<br>DPSだとたまに30分くらい待たされるのやばいよね〜！</td></tr>
+            <tr><td></td><td></td></tr>
+        </tbody>
+    </table>
+    </div>
+
+</body>
+</html>

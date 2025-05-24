@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/garbage.js"></script>
+    <script src="./js/Calendar.js"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+<body>
+    <!-- ゴミの日 -->
+    <p>Hello子供達</p>
+    <p id="id1">
+        <script>
+            document.write(garbage());
+        </script>
+    </p>
+
+    <!-- カレンダー -->
+    <div id="calendar"></div>
+    <script>mainCalendar()</script>
+    <button type="button" onclick="mainCalendar()">今月</button>
+    <button type="button" onclick="calendar1()">来月</button>
+
+    <!-- 画像を選択してサムネイルを変える 
+    <div class="container">
+        <div class="thumbnail">
+            <div>
+                <img src="./image/01.jpg" alt="" class="thumb-img">
+            </div>
+
+            <div>
+                <img src="./image/02.jpg" alt="" class="thumb-img">
+            </div>
+
+            <div>
+                <img src="./image/03.jpg" alt="" class="thumb-img">
+            </div>
+        
+        </div>
+        <div class="mainvisual">
+            <img src="./image/01.jpg" alt="" id="main">
+        </div>
+    </div>
+    <script src="./js/test3.js"></script> -->
+
+</body>
+</html>
