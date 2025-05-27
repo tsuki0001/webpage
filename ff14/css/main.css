@@ -6,7 +6,11 @@ body {
     color: #1f2937;
 }
 
-
+#event {
+    font-weight: bold;
+    color: #095984;
+    font-size: 1.1em;
+}
 
 header {
     background-image: url("../image/smile_hor.JPG");

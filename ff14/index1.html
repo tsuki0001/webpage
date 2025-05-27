@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <script src="./JavaScript/drop.js"></script>
+  <script src="./JavaScript/Event.js"></script>
   <title>ff14 備忘録も兼ねて！</title>
   <link rel="stylesheet" href="./css/main.css" >
   <link rel="stylesheet" href="./css/dropdown.css" >
@@ -67,7 +68,12 @@
     </div>
 
     <aside class="sidebar">
-      <h3>何入れよう...</h3>
+      <div class="card">
+          <h3>一言メモ</h3>
+          <div class="media-box">
+            <p id="event"><script>document.write(Event());</script></p>
+          </div>
+      </div>
       <div class="card">
         <h3>検索</h3>
         <input type="text" placeholder="キーワード検索" class="search-box">
@@ -82,10 +88,16 @@
           <p class="media-text">ソーチョー探し</p>
         </div>
         <div class="media-box">
-          <a href="https://www.xivdaily.com/ja/hunts/dt" target="_blank">
+          <a href="https://www.ff14memo.com/battle/mobhunt/" target="_blank">
             <img src="./image/mob-hunt.jpg"  alt="リンク画像">
           </a>
           <p class="media-text">モブハント</p>
+        </div>
+        <div class="media-box">
+          <a href="https://www.xivdaily.com/ja/hunts/dt" target="_blank">
+            <img src="./image/riskymob.jpg"  alt="リンク画像">
+          </a>
+          <p class="media-text">リスキーモブ</p>
         </div>
         <div class="media-box">
           <a href="https://www.thebalanceffxiv.com/" target="_blank">
